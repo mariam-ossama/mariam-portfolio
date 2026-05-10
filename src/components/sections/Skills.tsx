@@ -92,21 +92,21 @@ const Skills = () => {
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-linear-to-br from-[#5654a8]/5 via-transparent to-[#5654a8]/10"></div>
 
               {/* Icon */}
-              <div className="relative z-10 w-14 h-14 rounded-2xl bg-[#5654a8]/10 text-[#5654a8] flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="relative z-0 w-14 h-14 rounded-2xl bg-[#5654a8]/10 text-[#5654a8] flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                 {category.icon}
               </div>
 
               {/* Title */}
-              <h3 className="relative z-10 text-xl font-bold text-[#2a3439] mb-5">
+              <h3 className="relative z-0 overflow-hidden text-xl font-bold text-[#2a3439] mb-5">
                 {category.title}
               </h3>
 
               {/* Skills */}
-              <div className="relative z-10 flex flex-wrap gap-3">
+              <div className="relative z-0 flex flex-wrap gap-3">
                 {category.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-4 py-2 rounded-full bg-[#f3f5f7] text-sm text-[#2a3439] border border-[#a9b4b9]/10 hover:bg-[#5654a8] hover:text-white transition-all duration-300 cursor-default"
+                    className="px-4 py-2 rounded-full z-0 bg-[#f3f5f7] text-sm text-[#2a3439] border border-[#a9b4b9]/10 hover:bg-[#5654a8] hover:text-white transition-all duration-300 cursor-default"
                   >
                     {skill}
                   </span>

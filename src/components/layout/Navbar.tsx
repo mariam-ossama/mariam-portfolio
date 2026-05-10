@@ -19,7 +19,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 z-50 w-full bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur-xl">
+    <nav className="fixed top-0 z-9999 w-full bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
 
         {/* Logo */}
