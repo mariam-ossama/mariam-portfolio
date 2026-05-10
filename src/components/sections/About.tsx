@@ -24,13 +24,12 @@ const About = () => {
                 <span className="text-[#2a3439] font-semibold">
                   Cairo University
                 </span>{" "}
-                with a passion for structured problem-solving. My journey into
-                full-stack development was solidified through high-intensity
-                programs designed for the modern industry.
+                with a strong foundation in structured problem-solving and software engineering principles. 
+                My interest in full-stack development was strengthened through intensive, industry-focused training programs.
               </p>
 
               <p>
-                I completed the{" "}
+                I completed both the{" "}
                 <span className="text-[#2a3439] font-semibold">
                   DEBI Web Development track
                 </span>{" "}
@@ -38,15 +37,12 @@ const About = () => {
                 <span className="text-[#2a3439] font-semibold">
                   Route Full-Stack Diploma
                 </span>
-                , mastering the intricacies of both enterprise-level .NET
-                architectures and the agile world of JavaScript frameworks.
+                , gaining hands-on experience with enterprise-level ASP.NET systems as well as modern JavaScript frameworks in agile environments.
               </p>
 
               <p>
-                I thrive in environments that challenge my technical logic,
-                specifically when designing RESTful APIs or optimizing complex
-                database schemas. My goal is to craft digital experiences that
-                are as clean as they are powerful.
+                I enjoy solving technical challenges, especially when designing RESTful APIs or optimizing database structures for performance and scalability. 
+                My goal is to build clean, reliable, and impactful digital products.
               </p>
 
             </div>
