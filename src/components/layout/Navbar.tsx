@@ -46,7 +46,7 @@ export default function Navbar() {
             text="Download Resume"
             onClick={() => {
     const link = document.createElement("a");
-    link.href = "/public/Mariam_Mohamed_Resume.pdf";
+    link.href = "/Mariam_Mohamed_Resume.pdf";
     link.download = "Mariam_Mohamed-Osama_Resume.pdf";
     link.click();
   }}
