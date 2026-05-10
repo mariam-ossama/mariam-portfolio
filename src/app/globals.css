@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-color: #5654A8;
+  --secondary-color: #78767A;
+  --tertiary-color: #6B7791;
+  --nuetral: #F8FAFC;
 }
 
 @theme inline {
@@ -24,3 +28,20 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
+@layer components {
+    .btn-primary {
+        @apply w-full sm:w-auto bg-[#5654a8] text-[#faf6ff] px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold shadow-lg shadow-[#5654a8]/10 hover:bg-[#4a489b] transition-all;
+    }
+    .btn-secondary {
+        @apply w-full sm:w-auto bg-[#e1e9ee] text-[#5654a8] px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-[#d9e4ea] transition-all;
+    }
+    .btn-inverted {
+        @apply px-5 py-2 bg-[#0B0F10] text-white rounded-md cursor-pointer hover:bg-[#1B1B1F] transition
+    }
+}
+
+
+
