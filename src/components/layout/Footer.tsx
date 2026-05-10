@@ -10,7 +10,7 @@ export default function Footer() {
             </div>
 <div className="flex gap-8 mt-6 md:mt-0 text-xs uppercase tracking-widest font-medium">
 <a className="text-slate-500 dark:text-slate-500 hover:text-indigo-500 transition-colors opacity-80 hover:opacity-100" href="https://github.com/mariam-ossama">GitHub</a>
-<a className="text-slate-500 dark:text-slate-500 hover:text-indigo-500 transition-colors opacity-80 hover:opacity-100" href="linkedin.com/in/mariam-m-osama-738005281">LinkedIn</a>
+<a className="text-slate-500 dark:text-slate-500 hover:text-indigo-500 transition-colors opacity-80 hover:opacity-100" href="linkedin.com/in/mariam-m-osama">LinkedIn</a>
 {/* <a className="text-slate-500 dark:text-slate-500 hover:text-indigo-500 transition-colors opacity-80 hover:opacity-100" href="https://github.com/mariam-ossama/mariam-portfolio.git">Source Code</a> */}
 </div>
 </div>
