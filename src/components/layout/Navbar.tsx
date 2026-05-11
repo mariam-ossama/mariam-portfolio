@@ -12,7 +12,7 @@ const navigation = [
   { name: "Education", href: "#education" },
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
-  { name: "Contact", href: "#contact" },
+  // { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {

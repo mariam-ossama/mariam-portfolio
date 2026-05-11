@@ -12,6 +12,12 @@ export default function Footer() {
 <a className="text-slate-500 dark:text-slate-500 hover:text-indigo-500 transition-colors opacity-80 hover:opacity-100" href="https://github.com/mariam-ossama">GitHub</a>
 <a className="text-slate-500 dark:text-slate-500 hover:text-indigo-500 transition-colors opacity-80 hover:opacity-100" href="https://linkedin.com/in/mariam-m-osama-738005281">LinkedIn</a>
 {/* <a className="text-slate-500 dark:text-slate-500 hover:text-indigo-500 transition-colors opacity-80 hover:opacity-100" href="https://github.com/mariam-ossama/mariam-portfolio.git">Source Code</a> */}
+<a
+  className="text-slate-500 dark:text-slate-500 hover:text-indigo-500 transition-colors opacity-80 hover:opacity-100"
+  href="mailto:mariamosama772@gmail.com"
+>
+  mariamosama772@gmail.com
+</a>
 </div>
 </div>
 </footer>

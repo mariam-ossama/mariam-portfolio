@@ -31,6 +31,15 @@ export default function Header() {
       .getElementById("projects")
       ?.scrollIntoView({ behavior: "smooth" })}/>
             {/* <ButtonSecondary text="Let's Talk" onClick={() => alert("Let's Talk")} /> */}
+            <ButtonSecondary
+  text="Email Me"
+  onClick={() =>
+    window.open(
+      "https://mail.google.com/mail/?view=cm&fs=1&to=mariamosama772@gmail.com",
+      "_blank"
+    )
+  }
+/>
           </div>
         </div>
 
