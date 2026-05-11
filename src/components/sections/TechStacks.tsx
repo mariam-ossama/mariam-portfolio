@@ -12,9 +12,9 @@ const stacks = [
     description:
       "Focused on scalable enterprise-grade backend systems and structured frontend architecture using Microsoft technologies.",
     technologies: [
-      "ASP.NET Core",
+      "ASP.NET",
       "Angular",
-      "Entity Framework",
+      "Entity Framework Core",
       "SQL Server",
     ],
     dark: true,
