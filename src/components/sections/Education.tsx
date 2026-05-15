@@ -23,7 +23,7 @@ const Education = () => {
                 DEBI
               </h3>
               <p className="text-[#5654a8] font-medium">
-                AI-Powered Web Applications Track
+                AI-Powered Web Applications Development Track
               </p>
             </div>
 
@@ -31,7 +31,7 @@ const Education = () => {
 
             <div className="w-full md:w-1/2 pl-8 md:pl-12">
               <span className="text-sm text-[#566166] block mb-2">
-                Nov, 2025 - Jun, 2026
+                Nov, 2025 - Jul, 2026
               </span>
               <p className="text-sm text-[#566166] leading-relaxed">
                 Specialized intensive training in modern web standards and enterprise application architecture.
@@ -44,7 +44,7 @@ const Education = () => {
             
             <div className="w-full md:w-1/2 pl-8 md:pl-0 pr-0 md:pr-12 md:text-right mb-4 md:mb-0 order-2 md:order-1">
               <span className="text-sm text-[#566166] block mb-2">
-                Mar, 2025 - Jun, 2026
+                Mar, 2025 - Jul, 2026
               </span>
               <p className="text-sm text-[#566166] leading-relaxed">
                 Full-Stack Diploma focusing on ASP.NET/Angular ecosystems.
