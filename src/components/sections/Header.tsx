@@ -13,11 +13,18 @@ export default function Header() {
             Full-Stack Developer
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#2a3439] leading-tight">
+          {/* <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#2a3439] leading-tight">
             Engineering{" "}
             <span className="text-[#4a479b] italic">scalable</span> systems
             through precision code.
-          </h1>
+          </h1> */}
+          <span className="block text-base sm:text-lg font-semibold text-[#4a479b] mb-2 tracking-wide">
+  Hi, I'm Mariam Mohamed Osama.
+</span>
+<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#2a3439] leading-tight">
+  Engineering{" "}
+  <span className="text-[#4a479b] italic">scalable</span> systems...
+</h1>
 
           <p className="text-base sm:text-lg md:text-xl text-[#566166] leading-relaxed max-w-xl mx-auto md:mx-0">
             Bridging the gap between robust backend architecture and fluid user
