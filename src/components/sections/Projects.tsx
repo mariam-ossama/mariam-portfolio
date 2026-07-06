@@ -2,15 +2,71 @@ import React from 'react'
 
 const projects = [
   {
-    title: "AI CV Builder Platform",
-    desc: "AI-powered resume analysis platform that evaluates CVs against job descriptions using intelligent matching and automated insights. Built with a scalable full-stack architecture integrating authentication, API-driven workflows, and modern responsive UI.",
-    img: "https://placehold.net/600x400.png",
-    technologies: ["React", "Next" ,"TypeScript", "TailwindCSS","API Integration", "Nodejs", "Express","PostgreSQL"],
-    featured: true,
-    liveDemo: undefined,
-    sourceCode: undefined,
-    inProgress: true
-  },
+  title: "E-Commerce Backend Application",
+  desc: "A RESTful e-commerce backend that provides secure user authentication, role-based authorization, product and category management, shopping basket functionality, order processing, and payment integration. Supports advanced product browsing with searching, filtering, sorting, and pagination, along with image management and comprehensive API endpoints for seamless frontend integration. Designed to deliver a scalable, secure, and efficient backend for modern e-commerce applications.",
+  img: "https://placehold.co/600x400",
+  technologies: [
+    "ASP.NET WebAPI",
+    "SQL Server",
+    "Entity Framework Core",
+    "LINQ",
+    "Backend Development",
+    "Repository Pattern",
+    "Unit of Work Pattern",
+    "AutoMapper",
+    "Authentication & Authorization",
+    "Result Pattern",
+    "Dependency Injection",
+    "Specification Pattern",
+    "Onion Architecture",
+  ],
+  featured: true,
+  liveDemo: undefined,
+  sourceCode: "https://github.com/mariam-ossama/E_Commerce.git", 
+  inProgress: true
+},
+{
+  title: "Gym Management System",
+  desc: "A full-stack gym management platform built with ASP.NET MVC to streamline memberships, subscription plans, attendance, and daily administrative operations. Designed using clean architecture principles with the Repository and Unit of Work patterns, Entity Framework Core, SQL Server, AutoMapper, and dependency injection. Features secure authentication and role-based authorization, efficient LINQ-powered data access, and a responsive user interface for managing members and gym activities through a scalable and maintainable architecture.",
+  img: "/images/Gym_Management_System.png",
+  technologies: [
+    "ASP.NET MVC",
+    "SQL Server",
+    "Entity Framework Core",
+    "LINQ",
+    "Backend Development",
+    "Repository Pattern",
+    "Unit of Work Pattern",
+    "AutoMapper",
+    "Authentication & Authorization",
+    "Result Pattern",
+    "Dependency Injection",
+  ],
+  featured: true,
+  liveDemo: undefined,
+  sourceCode: "https://github.com/mariam-ossama/GymManagementSystem.git", 
+  inProgress: false
+},
+  {
+  title: "AI-Resume Builder Platform",
+  desc: "AI-powered resume analysis platform that evaluates CVs against job descriptions using intelligent matching and automated insights. Built with a scalable full-stack architecture integrating authentication, API-driven workflows, and a modern responsive UI.",
+  img: "/images/AI_CV_Builder.png",
+  technologies: [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "TailwindCSS",
+    "Node.js",
+    "Express",
+    "PostgreSQL",
+    "API Integration",
+    "3-Tier Architecture",
+  ],
+  featured: true,
+  liveDemo: "https://ai-cv-assistant-mu.vercel.app/",
+  sourceCode: undefined, 
+  inProgress: false
+},
   {
     title: "E-Commerce Web Application",
     desc: "Fully responsive E-Commerce platform built with Angular featuring authentication, product filtering, cart management, wishlist functionality, and responsive UI.",
@@ -59,7 +115,7 @@ sourceCode: "https://github.com/mariam-ossama/Landing-Page",
   {
     title: "CareerFusion (Graduation Project)",
     desc: "Full-stack AI-driven recruitment platform connecting job seekers and recruiters through intelligent resume matching, analytics dashboards, and cross-platform architecture integrating ASP.NET Core, React, Flask, and Flutter.",
-    img: "https://placehold.net/600x400.png",
+    img: "https://placehold.co/600x400",
     technologies: ["ASP.NET Core", "SQL Server" ,"React", "Flask", "Flutter"],
     featured: false,
     liveDemo: undefined,
@@ -159,25 +215,33 @@ const otherProjects = projects.filter(
                 {project.desc}
               </p>
 
-              <div className="flex gap-4">
-                <a
-                  href={project.liveDemo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#5654a8] font-bold text-sm hover:underline"
-                >
-                  🔗 Live Demo
-                </a>
+              {(project.liveDemo || project.sourceCode) && (
+  <div className="flex gap-4">
 
-                <a
-                  href={project.sourceCode}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#566166] font-bold text-sm hover:text-[#2a3439]"
-                >
-                  💻 Source Code
-                </a>
-              </div>
+    {project.liveDemo && (
+      <a
+        href={project.liveDemo}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[#5654a8] font-bold text-sm hover:underline"
+      >
+        🔗 Live Demo
+      </a>
+    )}
+
+    {project.sourceCode && (
+      <a
+        href={project.sourceCode}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[#566166] font-bold text-sm hover:text-[#2a3439]"
+      >
+        💻 Source Code
+      </a>
+    )}
+
+  </div>
+)}
             </div>
           </div>
          )
