@@ -58,7 +58,7 @@ const skillCategories = [
   {
     title: "Concepts",
     icon: <FaLightbulb />,
-    skills: ["OOP", "Data Structures","SOLID Principles", "Design Patterns"],
+    skills: ["OOP", "Data Structures","SOLID Principles", "Design Patterns", "Onion Architecture", "RESRful APIs", "Caching", "Dependency Injection"],
   },
 ];
 

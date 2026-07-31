@@ -8,6 +8,7 @@ const projects = [
   technologies: [
     "ASP.NET WebAPI",
     "SQL Server",
+    "Redis",
     "Entity Framework Core",
     "LINQ",
     "Backend Development",
@@ -19,11 +20,13 @@ const projects = [
     "Dependency Injection",
     "Specification Pattern",
     "Onion Architecture",
+    "Caching",
+    "Stripe Integration"
   ],
   featured: true,
   liveDemo: undefined,
   sourceCode: "https://github.com/mariam-ossama/E_Commerce.git", 
-  inProgress: true
+  inProgress: false
 },
 {
   title: "Gym Management System",
@@ -43,7 +46,7 @@ const projects = [
     "Dependency Injection",
   ],
   featured: true,
-  liveDemo: undefined,
+  liveDemo: "https://gym-management-app.runasp.net/",
   sourceCode: "https://github.com/mariam-ossama/GymManagementSystem.git", 
   inProgress: false
 },
