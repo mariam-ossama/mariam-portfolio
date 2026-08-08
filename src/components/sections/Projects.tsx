@@ -21,10 +21,12 @@ const projects = [
     "Specification Pattern",
     "Onion Architecture",
     "Caching",
-    "Stripe Integration"
+    "Stripe Integration",
+    "IIS Deployment",
+    "MonsterASP.NET Deployment"
   ],
   featured: true,
-  liveDemo: undefined,
+  liveDemo: "https://e-commerce-backend-webapi.runasp.net/swagger/index.html",
   sourceCode: "https://github.com/mariam-ossama/E_Commerce.git", 
   inProgress: false
 },
@@ -44,6 +46,8 @@ const projects = [
     "Authentication & Authorization",
     "Result Pattern",
     "Dependency Injection",
+    "IIS Deployment",
+    "MonsterASP.NET Deployment"
   ],
   featured: true,
   liveDemo: "https://gym-management-app.runasp.net/",
