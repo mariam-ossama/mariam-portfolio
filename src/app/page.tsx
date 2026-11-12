@@ -1,6 +1,7 @@
 "use client";
 import About from "@/components/sections/About";
 import Education from "@/components/sections/Education";
+import Experience from "@/components/sections/Experience";
 // import Button from "@/components/ui/Button";
 // import Image from "next/image";
 // import HeaderPage from "./header/page";
@@ -28,6 +29,7 @@ export default function Home() {
       <Header />
       <About />
       <TechStacks />
+      <Experience />
       <Education />
       <Projects />
       <Skills />

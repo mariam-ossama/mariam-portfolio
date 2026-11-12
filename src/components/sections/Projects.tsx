@@ -1,6 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const projects = [
+  {
+  title: "Travel Agency Management System (Backend) (ITechPro-eg internship)",
+  desc: "TAMS is a tourism management system developed to streamline and manage the operational workflows of a tourism company. The project focuses on digitizing business processes, managing tourism-related services and facilitating coordination across different operational roles through a centralized system.",
+  img: "https://placehold.co/600x400",
+  technologies: [
+    "C#",
+    "ASP.NET WebAPI",
+    "SQL Server",
+    "Entity Framework Core",
+    "LINQ",
+    "Backend Development",
+    "Repository Pattern",
+    "Unit of Work Pattern",
+    "Authentication & Authorization",
+    "Result Pattern",
+    "Dependency Injection",
+    "Clean Architecture",
+    "Unit Testing",
+  ],
+  category: "professional",
+  featured: true,
+  liveDemo: "https://api-dev-tms.itechpro-eg.cloud/swagger/index.html",
+  sourceCode: undefined, 
+  inProgress: false
+},
+{
+  title: "Travel Agency Management System (Frontend)",
+  desc: "Not My Own Project, but added just for reference as I have CONTRIBUTED TO THE BACKEND of this project. TAMS is a tourism management system developed to streamline and manage the operational workflows of a tourism company. The project focuses on digitizing business processes, managing tourism-related services and facilitating coordination across different operational roles through a centralized system.",
+  img: "/images/tams.png",
+  technologies: [
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Frontend Development",
+    "Clean Architecture",
+  ],
+  category: "professional",
+  featured: true,
+  liveDemo: "https://dev-tms.itechpro-eg.cloud/",
+  sourceCode: undefined, 
+  inProgress: false
+},
   {
   title: "E-Commerce Backend Application",
   desc: "A RESTful e-commerce backend that provides secure user authentication, role-based authorization, product and category management, shopping basket functionality, order processing, and payment integration. Supports advanced product browsing with searching, filtering, sorting, and pagination, along with image management and comprehensive API endpoints for seamless frontend integration. Designed to deliver a scalable, secure, and efficient backend for modern e-commerce applications.",
@@ -25,6 +67,7 @@ const projects = [
     "IIS Deployment",
     "MonsterASP.NET Deployment"
   ],
+  category: "self-study",
   featured: true,
   liveDemo: "https://e-commerce-backend-webapi.runasp.net/swagger/index.html",
   sourceCode: "https://github.com/mariam-ossama/E_Commerce.git", 
@@ -49,6 +92,7 @@ const projects = [
     "IIS Deployment",
     "MonsterASP.NET Deployment"
   ],
+  category: "self-study",
   featured: true,
   liveDemo: "https://gym-management-app.runasp.net/",
   sourceCode: "https://github.com/mariam-ossama/GymManagementSystem.git", 
@@ -69,6 +113,7 @@ const projects = [
     "API Integration",
     "3-Tier Architecture",
   ],
+  category: "self-study",
   featured: true,
   liveDemo: "https://ai-cv-assistant-mu.vercel.app/",
   sourceCode: undefined, 
@@ -79,6 +124,7 @@ const projects = [
     desc: "Fully responsive E-Commerce platform built with Angular featuring authentication, product filtering, cart management, wishlist functionality, and responsive UI.",
     img: "/images/E-Commerce-Angular.png",
     technologies: ["Angular", "TypeScript", "RxJS", "TailwindCSS","API Integration"],
+    category: "self-study",
     featured: true,
     liveDemo: "https://e-commerce-two-alpha-42.vercel.app/",
     sourceCode: "https://github.com/mariam-ossama/e-commerce",
@@ -88,6 +134,7 @@ const projects = [
     desc: "Modern responsive landing page and UI system built with Tailwind CSS featuring reusable components, smooth animations, and mobile-first responsive design.",
     img: "/images/Trendify.png",
     technologies: ["HTML","CSS","JavaScript", "TailwindCSS"],
+    category: "self-study",
     featured: false,
     liveDemo: "https://​trendify-tailwindcss.vercel.app",
     sourceCode: "https://github.com/mariam-ossama/trendify-tailwindcss.git⁠",
@@ -97,6 +144,7 @@ const projects = [
     desc: "Interactive game discovery platform integrated with external APIs, featuring dynamic game browsing, category filtering, and responsive user experience.",
     img: "/images/Games.png",
     technologies: ["HTML","CSS","JavaScript", "API Integration", "Bootstrap"],
+    category: "self-study",
     featured: false,
     liveDemo: "https://mariam-ossama.github.io/Game-Over/",
     sourceCode: "https://github.com/mariam-ossama/Game-Over",
@@ -106,6 +154,7 @@ const projects = [
     desc: "Designed and developed a responsive weather forecast website that integrates external weather APIs to provide real-time temperature, humidity, and forecast insights with an intuitive and interactive user experience.",
     img: "/images/WeaherForcast.png",
     technologies: ["HTML","CSS","JavaScript", "API Integration", "Bootstrap"],
+    category: "self-study",
     featured: false,
     liveDemo: "https://mariam-ossama.github.io/WeatherForecast/",
     sourceCode: "https://github.com/mariam-ossama/WeatherForecast.git",
@@ -115,15 +164,17 @@ const projects = [
     desc: "Responsive personal portfolio landing page with smooth scrolling navigation, animated sections, and modern Bootstrap-based UI implementation.",
     img: "/images/Daniels.png",
     technologies: ["HTML","CSS","JavaScript", "Bootstrap"],
+    category: "self-study",
     featured: false,
     liveDemo: "https://mariam-ossama.github.io/Landing-Page/",
-sourceCode: "https://github.com/mariam-ossama/Landing-Page",
+    sourceCode: "https://github.com/mariam-ossama/Landing-Page",
   },
   {
     title: "CareerFusion (Graduation Project)",
     desc: "Full-stack AI-driven recruitment platform connecting job seekers and recruiters through intelligent resume matching, analytics dashboards, and cross-platform architecture integrating ASP.NET Core, React, Flask, and Flutter.",
     img: "https://placehold.co/600x400",
     technologies: ["ASP.NET Core", "SQL Server" ,"React", "Flask", "Flutter"],
+    category: "self-study",
     featured: false,
     liveDemo: undefined,
     sourceCode: undefined,
@@ -132,19 +183,37 @@ sourceCode: "https://github.com/mariam-ossama/Landing-Page",
 ]
 
 const Projects = () => {
-  const featuredProjects = projects.filter(
-  (project) => project.featured
-)
+  const [activeTab, setActiveTab] = useState("all");
 
-const otherProjects = projects.filter(
-  (project) => !project.featured
-)
+  const filteredProjects = projects.filter((project) => {
+    if (activeTab === "all") return true;
+    return project.category === activeTab;
+  });
+
+  // Professional projects always appear first.
+  const sortByCategory = (
+  a: (typeof projects)[number],
+  b: (typeof projects)[number]
+) => {
+  if (a.category === "professional" && b.category !== "professional") return -1;
+  if (a.category !== "professional" && b.category === "professional") return 1;
+  return 0;
+};
+
+  const featuredProjects = filteredProjects
+    .filter((project) => project.featured)
+    .sort(sortByCategory);
+
+  const otherProjects = filteredProjects
+    .filter((project) => !project.featured)
+    .sort(sortByCategory);
 
   return (
-    <section className="py-24 max-w-7xl mx-auto px-8" id="projects">
+    <section className="bg-[#f0f4f7] py-24" id="projects">
 
       {/* Header */}
-      <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
         <div>
           <h2 className="text-4xl font-extrabold tracking-tight mb-4 text-[#2a3439] font-['Inter']">
             Projects
@@ -156,21 +225,43 @@ const otherProjects = projects.filter(
         </div>
 
         {/* Navigation Tabs - Hidden For Now */}
-        {/**
         <div className="flex gap-4 p-1 bg-[#e8eff3] rounded-lg">
-          <button className="px-6 py-2 bg-[#ffffff] text-[#5654a8] rounded-md font-medium text-sm shadow-sm">
-            All
-          </button>
 
-          <button className="px-6 py-2 text-[#566166] hover:text-[#2a3439] rounded-md font-medium text-sm">
-            Self-Study
-          </button>
+  <button
+    onClick={() => setActiveTab("all")}
+    className={`px-6 py-2 rounded-md font-medium text-sm transition-all duration-300 ${
+      activeTab === "all"
+        ? "bg-white text-[#5654a8] shadow-sm"
+        : "text-[#566166] hover:text-[#2a3439]"
+    }`}
+  >
+    All
+  </button>
 
-          <button className="px-6 py-2 text-[#566166] hover:text-[#2a3439] rounded-md font-medium text-sm">
-            Freelance
-          </button>
-        </div>
-        */}
+  <button
+    onClick={() => setActiveTab("self-study")}
+    className={`px-6 py-2 rounded-md font-medium text-sm transition-all duration-300 ${
+      activeTab === "self-study"
+        ? "bg-white text-[#5654a8] shadow-sm"
+        : "text-[#566166] hover:text-[#2a3439]"
+    }`}
+  >
+    Self-Study
+  </button>
+
+  <button
+    onClick={() => setActiveTab("professional")}
+    className={`px-6 py-2 rounded-md font-medium text-sm transition-all duration-300 ${
+      activeTab === "professional"
+        ? "bg-white text-[#5654a8] shadow-sm"
+        : "text-[#566166] hover:text-[#2a3439]"
+    }`}
+  >
+    Professional Experience
+  </button>
+
+</div>
+       
       </div>
 
       {/* Grid */}
@@ -325,6 +416,7 @@ const otherProjects = projects.filter(
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   )
