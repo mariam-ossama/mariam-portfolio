@@ -26,7 +26,7 @@ const skillCategories = [
       "JQuery",
       "SASS",
       "Angular",
-      "React.js"
+      "React.js / Next.js",
     ],
   },
   {
@@ -34,15 +34,17 @@ const skillCategories = [
     icon: <FaServer />,
     skills: [
       "ASP.NET",
-      "Node.js / Express",
-      "Django",
       "LINQ",
       "EF Core",
       "ASP.NET MVC",
       "ASP.NET WebAPI",
+      "Node.js / Express",
+      "Prisma",
+      "Django",
       "API Development",
       "RESTful Services",
       "JWT Authentication",
+      "SignalR",
     ],
   },
   {
@@ -58,7 +60,7 @@ const skillCategories = [
   {
     title: "Concepts",
     icon: <FaLightbulb />,
-    skills: ["OOP", "Data Structures","SOLID Principles", "Design Patterns", "Onion Architecture", "RESRful APIs", "Caching", "Dependency Injection"],
+    skills: ["OOP", "Data Structures","SOLID Principles", "Design Patterns", "Onion Architecture", "Clean Architecture", "RESTful APIs", "Caching", "Dependency Injection", "WebSockets", "WebHooks"],
   },
 ];
 
